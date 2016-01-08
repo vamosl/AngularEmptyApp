@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app" ng-strict-di ng-cloack>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title data-ng-bind="title"></title>
+    <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        .ng-hide {
+            display: none!important;
+        }
+    </style>
+
+
+</head>
+<body>
+	<div id="playground" ng-controller="playgroundCtrl as ctrl">
+		{{ctrl.name}}
+	</div>
+
+    <!-- inject-vendor:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <!-- endinject -->
+
+
+    <!-- inject:js -->
+    <!-- Bootstrapping -->
+    <script src="app/app.module.js"></script>
+
+    <!-- core module -->
+    <script src="app/core.module.js"></script>
+
+    <!-- playground -->
+	<script src="app/playground.module.js"></script>
+	<script src="app/playground.js"></script>
+	
+    <!-- endinject -->
+</body>
+</html>
